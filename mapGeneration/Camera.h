@@ -60,7 +60,7 @@ public:
 		return glm::lookAt(position, position + front, up);
 	}
 
-	void processKeys(Camera_Movement direction, float deltaTime) 
+	void processKeys(Camera_Movement direction, float deltaTime)
 	{
 		float velocity = movementSpeed * deltaTime;
 		if (direction == FORWARD)
@@ -86,7 +86,7 @@ public:
 		if (pitch < -89.0f)
 			pitch = -89.0f;
 
-		
+
 
 		updateCameraVectors();
 	}

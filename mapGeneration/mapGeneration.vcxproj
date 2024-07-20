@@ -167,10 +167,10 @@ copy "$(SolutionDir)Dependencies\glew\bin\Release\$(Platform)\glew32.dll" "$(Out
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Open_Gl_proj_1\Open_Gl_proj_1\Camera.h" />
-    <ClInclude Include="..\..\Open_Gl_proj_1\Open_Gl_proj_1\Shader.h" />
-    <ClInclude Include="..\..\Open_Gl_proj_1\Open_Gl_proj_1\stb_image.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Perlin.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

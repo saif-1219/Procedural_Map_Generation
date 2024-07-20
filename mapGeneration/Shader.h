@@ -16,7 +16,7 @@ class Shader
 {
 public:
 	unsigned int ID; //the program ID
-	
+
 	Shader(const char* vertexPath, const char* fragmentPath); //constructor
 
 	void use();
@@ -100,12 +100,12 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 	glDeleteShader(fragmentShader);
 }
 
-void Shader::use() 
+void Shader::use()
 {
 	glUseProgram(ID);
 }
 
-void Shader::setBool(const std::string& name, bool value) const 
+void Shader::setBool(const std::string& name, bool value) const
 {
 	glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
 }
@@ -117,7 +117,7 @@ void Shader::setFloat(const std::string& name, float value) const
 
 void Shader::setMat4(const std::string& name, const glm::mat4& value) const
 {
-		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+	glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
 void Shader::setInt(const std::string& name, int value) const
